@@ -37,7 +37,8 @@ function extendRecursivly (proot, config, e) {
   for (const file in o) { // eslint-disable-line guard-for-in
     const fileType = files[file]
     const srcFile = path.join(proot, fileType.srcFile)
-    fs.writeFileSync(srcFile, fileType.stringify(fileType.join(fileType.parse(String(fs.readFileSync(srcFile))), o[file])))
+    const old = fs.existsSync(srcFile) ? fileType.parse(String(fs.readFileSync(srcFile))) : fileType.base
+    fs.writeFileSync(srcFile, fileType.stringify(fileType.join(old, o[file])))
   }
 }
 

@@ -2,7 +2,7 @@
 
 module.exports = {
   base: {
-    custom: []
+    custom: ['## add your entries']
   },
   singleAppend: (srcTemplate, res, cur) => {
     cur[srcTemplate] = res
@@ -13,7 +13,7 @@ module.exports = {
     let tl = false
     let cl = 'custom'
 
-    const p = {}
+    const p = { custom: [] }
 
     content.split('\n').forEach(l => {
       if (!fn && l === '') {
@@ -46,12 +46,14 @@ module.exports = {
         p[cl].push(l)
       }
     })
+
+    return p
   },
   stringify: (list) => {
     const out = []
     for (const key in list) { // eslint-disable-line guard-for-in
       out.push('', `# ${key}`, '')
-      key[list].forEach(el => {
+      list[key].forEach(el => {
         if (out.indexOf(el) === -1) {
           out.push(el)
         }
@@ -62,6 +64,7 @@ module.exports = {
   },
   join: (o, n) => {
     n.custom = o.custom || []
+    return n
   },
   srcFile: '.gitignore'
 }

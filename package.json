@@ -1,5 +1,10 @@
 {
   "name": "mkgs-tool",
+  "template": {
+    "extends": [
+      "node"
+    ]
+  },
   "version": "0.1.0",
   "description": "Tiny project managment tool for mkg's stuff :P",
   "main": "src/index.js",
@@ -9,7 +14,8 @@
     "mkgs-tool": "src/bin.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -A",
+    "cov": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -18,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/mkg20001/mkgs-tool/issues"
   },
-  "homepage": "https://github.com/mkg20001/mkgs-tool#readme"
+  "homepage": "https://github.com/mkg20001/mkgs-tool#readme",
+  "dependencies": {
+    "merge-options": "^2.0.0",
+    "mocha": "*",
+    "nyc": "*"
+  }
 }
