@@ -4,5 +4,19 @@
   "description": "Tiny project managment tool for mkg's stuff :P",
   "main": "src/index.js",
   "author": "Maciej Krüger <mkg20001@gmail.com>",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "bin": {
+    "mkgs-tool": "src/bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/mkgs-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/mkgs-tool/issues"
+  },
+  "homepage": "https://github.com/mkg20001/mkgs-tool#readme"
 }
