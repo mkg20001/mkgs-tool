@@ -8,12 +8,12 @@ module.exports = (config) => {
       !config.noLock && 'package-lock.json',
       !config.noLock && !config.noYarn && 'yarn.lock'
     ],
-    packageJSON: {
+    packageJSON: config.noTools ? {} : {
       scripts: {
         test: 'mocha -A',
         cov: 'nyc mocha'
       },
-      dependencies: {
+      devDependencies: {
         mocha: '*',
         nyc: '*'
       }
