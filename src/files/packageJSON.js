@@ -11,5 +11,6 @@ module.exports = {
   stringify: JSON.stringify,
   join: (o, n) => {
     return mergeOptions(o, n)
-  }
+  },
+  srcFile: 'package.json'
 }

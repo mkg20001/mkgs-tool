@@ -1,0 +1,23 @@
+'use strict'
+
+const fs = require('fs')
+const path = require('path')
+
+let cwd = process.cwd()
+let pjson
+
+while (!pjson && cwd !== '/') {
+  if (fs.existsSync(path.join(cwd, 'package.json'))) {
+    pjson = path.join(cwd, 'package.json')
+  } else {
+    cwd = path.dirname(cwd)
+  }
+}
+
+if (!pjson) {
+  throw new Error('No top-level package.json found!')
+}
+
+const {template} = require(pjson)
+
+
