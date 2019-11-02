@@ -1,0 +1,8 @@
+{
+  "name": "mkgs-tool",
+  "version": "0.0.1",
+  "description": "Tiny project managment tool for mkg's stuff :P",
+  "main": "src/index.js",
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "MPL-2.0"
+}

@@ -1,7 +1,9 @@
 'use strict'
 
 module.exports = {
-  base: {},
+  base: {
+    custom: []
+  },
   singleAppend: (srcTemplate, res, cur) => {
     cur[srcTemplate] = res
     return cur
@@ -9,9 +11,9 @@ module.exports = {
   parse: (content) => {
     let fn = false
     let tl = false
-    let cl = false
+    let cl = 'custom'
 
-    let p = {}
+    const p = {}
 
     content.split('\n').forEach(l => {
       if (!fn && l === '') {
@@ -26,7 +28,7 @@ module.exports = {
         fn = false
         return
       }
-      
+
       if (fn && tl && l === '') {
         cl = tl
         fn = false
@@ -46,10 +48,14 @@ module.exports = {
     })
   },
   stringify: (list) => {
-    let out = []
-    for (const key in list) {
+    const out = []
+    for (const key in list) { // eslint-disable-line guard-for-in
       out.push('', `# ${key}`, '')
-      out.push(...key[list])
+      key[list].forEach(el => {
+        if (out.indexOf(el) === -1) {
+          out.push(el)
+        }
+      })
     }
 
     return out.join('\n') + '\n'
