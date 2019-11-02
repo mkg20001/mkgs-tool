@@ -1,9 +1,11 @@
+#!/usr/bin/env noode
+
 'use strict'
 
 const fs = require('fs')
 const path = require('path')
 
-let cwd = process.cwd()
+let cwd = process.env.INIT_CWD || process.cwd()
 let pjson
 
 while (!pjson && cwd !== '/') {

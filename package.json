@@ -16,7 +16,7 @@
   "scripts": {
     "test": "mocha -A",
     "cov": "nyc mocha",
-    "postinstall": "env"
+    "postinstall": "node ./src/bin.js"
   },
   "repository": {
     "type": "git",
