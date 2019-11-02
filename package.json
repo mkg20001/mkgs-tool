@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "mocha -A",
-    "cov": "nyc mocha"
+    "cov": "nyc mocha",
+    "postinstall": "env"
   },
   "repository": {
     "type": "git",
