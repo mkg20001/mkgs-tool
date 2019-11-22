@@ -5,7 +5,7 @@
       "node"
     ]
   },
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Tiny project managment tool for mkg's stuff :P",
   "main": "src/index.js",
   "author": "Maciej Krüger <mkg20001@gmail.com>",
