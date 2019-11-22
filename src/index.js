@@ -7,6 +7,7 @@ const files = {
 
 const templates = {
   parcel: require('./templates/parcel'),
+  nix: require('./templates/nix'),
   node: require('./templates/node')
 }
 
