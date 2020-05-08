@@ -15,7 +15,7 @@ module.exports = {
 
     const p = { custom: [] }
 
-    content.split('\n').forEach(l => {
+    content.replace(/\r/g, '').split('\n').forEach(l => {
       if (!fn && l === '') {
         fn = true
         return
