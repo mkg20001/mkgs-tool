@@ -1,11 +1,13 @@
 'use strict'
 
 const files = {
+  eslintrc: require('./files/eslintrc'),
   gitignore: require('./files/gitignore'),
-  packageJSON: require('./files/packageJSON')
+  packageJSON: require('./files/package-json')
 }
 
 const templates = {
+  eslint: require('./templates/eslint'),
   parcel: require('./templates/parcel'),
   nix: require('./templates/nix'),
   node: require('./templates/node')
@@ -29,7 +31,10 @@ function extendRecursivly (proot, config, e) {
       }
 
       for (const key in out) { // eslint-disable-line guard-for-in
-        if (!o[key]) { o[key] = files[key].base }
+        if (!o[key]) {
+          o[key] = files[key].base
+        }
+
         o[key] = files[key].singleAppend(template, out[key], o[key])
       }
     }

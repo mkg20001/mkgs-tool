@@ -2,7 +2,8 @@
   "name": "mkgs-tool",
   "template": {
     "extends": [
-      "node"
+      "node",
+      "eslint"
     ]
   },
   "version": "0.1.8",
@@ -16,7 +17,9 @@
   "scripts": {
     "test": "mocha -A",
     "cov": "nyc mocha",
-    "postinstall": "node ./src/bin.js"
+    "postinstall": "node ./src/bin.js",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,9 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "nyc": "*"
+    "nyc": "*",
+    "eslint-config-aegir-standalone": "*",
+    "eslint-config-oclif": "*",
+    "eslint": "*"
   }
 }

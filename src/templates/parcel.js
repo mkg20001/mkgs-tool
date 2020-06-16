@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (config) => {
+module.exports = config => {
   return {
     extends: ['node'],
     gitignore: ['.cache', '.parcel-cache', 'dist'],

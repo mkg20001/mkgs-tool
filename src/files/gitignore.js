@@ -8,7 +8,7 @@ module.exports = {
     cur[srcTemplate] = res
     return cur
   },
-  parse: (content) => {
+  parse: content => {
     let fn = false
     let tl = false
     let cl = 'custom'
@@ -24,7 +24,9 @@ module.exports = {
       if (fn && !tl && l.startsWith('#')) {
         tl = l.substr(2)
         return
-      } else if (fn && !tl) {
+      }
+
+      if (fn && !tl) {
         fn = false
         return
       }
@@ -36,7 +38,9 @@ module.exports = {
         p[cl] = []
 
         return
-      } else if (fn && tl) {
+      }
+
+      if (fn && tl) {
         fn = false
         tl = false
         return
@@ -49,7 +53,7 @@ module.exports = {
 
     return p
   },
-  stringify: (list) => {
+  stringify: list => {
     const out = []
     for (const key in list) { // eslint-disable-line guard-for-in
       out.push('', `# ${key}`, '')

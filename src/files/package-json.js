@@ -8,7 +8,7 @@ module.exports = {
     return mergeOptions(cur, res)
   },
   parse: JSON.parse,
-  stringify: (o) => JSON.stringify(o, null, 2) + '\n',
+  stringify: o => JSON.stringify(o, null, 2) + '\n',
   join: (o, n) => {
     return mergeOptions(o, n)
   },
