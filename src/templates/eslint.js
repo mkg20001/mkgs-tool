@@ -3,7 +3,10 @@
 module.exports = config => {
   return {
     eslintrc: {
-      extends: ['oclif', 'aegir-standalone'],
+      extends: [
+        'oclif',
+        'aegir-standalone'
+      ],
       rules: {
         'no-await-in-loop': 'off'
       }

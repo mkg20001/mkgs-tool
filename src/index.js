@@ -8,9 +8,11 @@ const files = {
 
 const templates = {
   eslint: require('./templates/eslint'),
-  parcel: require('./templates/parcel'),
   nix: require('./templates/nix'),
-  node: require('./templates/node')
+  node: require('./templates/node-eslint'),
+  nodeEslint: require('./templates/node'),
+  parcel: require('./templates/parcel'),
+  parcelEslint: require('./templates/parcel-eslint')
 }
 
 const path = require('path')
