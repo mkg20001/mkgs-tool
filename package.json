@@ -2,8 +2,7 @@
   "name": "mkgs-tool",
   "template": {
     "extends": [
-      "node",
-      "eslint"
+      "nodeEslint"
     ]
   },
   "version": "0.1.9",

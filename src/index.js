@@ -9,8 +9,8 @@ const files = {
 const templates = {
   eslint: require('./templates/eslint'),
   nix: require('./templates/nix'),
-  node: require('./templates/node-eslint'),
-  nodeEslint: require('./templates/node'),
+  node: require('./templates/node'),
+  nodeEslint: require('./templates/node-eslint'),
   parcel: require('./templates/parcel'),
   parcelEslint: require('./templates/parcel-eslint')
 }
@@ -24,6 +24,7 @@ function extendRecursivly (proot, config, e) {
 
   for (let i = 0; i < e.length; i++) {
     const template = e[i]
+
     if (!c[template]) {
       const out = templates[template](config[template] || {})
 
