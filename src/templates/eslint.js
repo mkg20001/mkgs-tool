@@ -4,8 +4,8 @@ module.exports = config => {
   return {
     eslintrc: {
       extends: [
-        'oclif',
-        'aegir-standalone'
+        'ipfs',
+        'oclif'
       ],
       rules: {
         'no-await-in-loop': 'off'
@@ -18,7 +18,7 @@ module.exports = config => {
       },
       devDependencies: {
         eslint: '*',
-        'eslint-config-aegir-standalone': '*',
+        'eslint-config-ipfs': '*',
         'eslint-config-oclif': '*'
       }
     }
