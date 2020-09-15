@@ -29,13 +29,13 @@
   },
   "homepage": "https://github.com/mkg20001/mkgs-tool#readme",
   "dependencies": {
-    "merge-options": "^2.0.0"
+    "merge-options": "^3.0.2"
   },
   "devDependencies": {
     "mocha": "*",
     "nyc": "*",
-    "eslint-config-aegir-standalone": "*",
     "eslint-config-oclif": "*",
-    "eslint": "*"
+    "eslint": "*",
+    "eslint-config-ipfs": "*"
   }
 }
