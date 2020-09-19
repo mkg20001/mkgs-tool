@@ -1,4 +1,3 @@
-'use strict'
 
 module.exports = config => {
   return {
@@ -8,10 +7,10 @@ module.exports = config => {
         {
           files: ['test/**/*.js'],
           env: {
-            mocha: true
-          }
-        }
-      ]
-    }
+            mocha: true,
+          },
+        },
+      ],
+    },
   }
 }

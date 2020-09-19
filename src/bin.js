@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-'use strict'
-
 const fs = require('fs')
 const path = require('path')
 
@@ -20,10 +18,10 @@ if (!pjson) {
   throw new Error('No top-level package.json found!')
 }
 
-const { template } = require(pjson)
+const {template} = require(pjson)
 const e = template.extends
 delete template.extends
 
-const { extendRecursivly } = require('.')
+const {extendRecursivly} = require('.')
 
 extendRecursivly(cwd, template, e)

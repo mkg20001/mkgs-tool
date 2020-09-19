@@ -1,9 +1,8 @@
-'use strict'
 
 const files = {
   eslintrc: require('./files/eslintrc'),
   gitignore: require('./files/gitignore'),
-  packageJSON: require('./files/package-json')
+  packageJSON: require('./files/package-json'),
 }
 
 const templates = {
@@ -12,13 +11,13 @@ const templates = {
   node: require('./templates/node'),
   nodeEslint: require('./templates/node-eslint'),
   parcel: require('./templates/parcel'),
-  parcelEslint: require('./templates/parcel-eslint')
+  parcelEslint: require('./templates/parcel-eslint'),
 }
 
 const path = require('path')
 const fs = require('fs')
 
-function extendRecursivly (proot, config, e) {
+function extendRecursivly(proot, config, e) {
   const c = {}
   const o = {}
 
@@ -52,5 +51,5 @@ function extendRecursivly (proot, config, e) {
 }
 
 module.exports = {
-  extendRecursivly
+  extendRecursivly,
 }

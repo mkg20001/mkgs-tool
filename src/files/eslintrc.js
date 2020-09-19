@@ -1,4 +1,3 @@
-'use strict'
 
 const mergeOptions = require('merge-options')
 
@@ -12,5 +11,5 @@ module.exports = {
   join: (o, n) => {
     return mergeOptions(o, n)
   },
-  srcFile: '.eslintrc'
+  srcFile: '.eslintrc',
 }

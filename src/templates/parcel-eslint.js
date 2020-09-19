@@ -1,4 +1,3 @@
-'use strict'
 
 module.exports = config => {
   return {
@@ -8,10 +7,10 @@ module.exports = config => {
         {
           files: ['public/**/*.js'],
           env: {
-            browser: true
-          }
-        }
-      ]
-    }
+            browser: true,
+          },
+        },
+      ],
+    },
   }
 }
