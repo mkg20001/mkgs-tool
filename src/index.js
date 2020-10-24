@@ -1,16 +1,20 @@
 
 const files = {
+  babelrc: require('./files/babelrc'),
   eslintrc: require('./files/eslintrc'),
   gitignore: require('./files/gitignore'),
   packageJSON: require('./files/package-json'),
 }
 
 const templates = {
+  babel: require('./templates/babel'),
   eslint: require('./templates/eslint'),
   nix: require('./templates/nix'),
   node: require('./templates/node'),
   nodeEslint: require('./templates/node-eslint'),
   parcel: require('./templates/parcel'),
+  parcelBabel: require('./templates/parcel-babel'),
+  parcelBabelEslint: require('./templates/parcel-babel-eslint'),
   parcelEslint: require('./templates/parcel-eslint'),
 }
 
