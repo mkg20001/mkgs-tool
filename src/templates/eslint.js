@@ -2,8 +2,8 @@ module.exports = config => {
   return {
     eslintrc: {
       extends: [
-        'ipfs',
         'oclif',
+        'ipfs',
       ],
       rules: {
         'no-await-in-loop': 'off',
