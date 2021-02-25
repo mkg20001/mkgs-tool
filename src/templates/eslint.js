@@ -3,7 +3,7 @@ module.exports = config => {
     eslintrc: {
       extends: [
         'oclif',
-        'ipfs',
+        'ipfs/js',
       ],
       rules: {
         'no-await-in-loop': 'off',

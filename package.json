@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/mkg20001/mkgs-tool#readme",
   "dependencies": {
-    "merge-options": "^3.0.3",
-    "typescript": "^4.0.3"
+    "merge-options": "^3.0.4"
   },
   "devDependencies": {
     "eslint": "*",
