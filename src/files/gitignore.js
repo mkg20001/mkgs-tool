@@ -1,7 +1,7 @@
 
 module.exports = {
   base: {
-    custom: ['## add your entries'],
+    custom: ['## add your entries']
   },
   singleAppend: (srcTemplate, res, cur) => {
     cur[srcTemplate] = res
@@ -12,7 +12,7 @@ module.exports = {
     let tl = false
     let cl = 'custom'
 
-    const p = {custom: []}
+    const p = { custom: [] }
 
     content.replace(/\r/g, '').split('\n').forEach(l => {
       if (!fn && l === '') {
@@ -69,5 +69,5 @@ module.exports = {
     n.custom = o.custom || []
     return n
   },
-  srcFile: '.gitignore',
+  srcFile: '.gitignore'
 }

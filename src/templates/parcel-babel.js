@@ -1,5 +1,5 @@
 module.exports = config => {
   return {
-    extends: ['parcel', 'babel'],
+    extends: ['parcel', 'babel']
   }
 }

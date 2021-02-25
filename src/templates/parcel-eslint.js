@@ -7,10 +7,10 @@ module.exports = config => {
         {
           files: ['public/**/*.js'],
           env: {
-            browser: true,
-          },
-        },
-      ],
-    },
+            browser: true
+          }
+        }
+      ]
+    }
   }
 }

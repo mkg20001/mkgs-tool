@@ -16,10 +16,12 @@ module.exports = config => {
     extends: ['node'],
     gitignore: ['.cache', '.parcel-cache', 'dist'],
     packageJSON: {
-      scripts: config.noScripts ? {} : {
-        start: `parcel ${v2 ? 'serve' : 'start'} ${entries} ${config.startFlags || ''} ${config.flags || ''}`,
-        build: `rm -rf dist && parcel build ${entries} ${config.buildFlags || ''} ${config.flags || ''}`,
-      },
-    },
+      scripts: config.noScripts
+        ? {}
+        : {
+            start: `parcel ${v2 ? 'serve' : 'start'} ${entries} ${config.startFlags || ''} ${config.flags || ''}`,
+            build: `rm -rf dist && parcel build ${entries} ${config.buildFlags || ''} ${config.flags || ''}`
+          }
+    }
   }
 }

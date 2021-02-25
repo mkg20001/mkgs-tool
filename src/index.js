@@ -3,7 +3,7 @@ const files = {
   babelrc: require('./files/babelrc'),
   eslintrc: require('./files/eslintrc'),
   gitignore: require('./files/gitignore'),
-  packageJSON: require('./files/package-json'),
+  packageJSON: require('./files/package-json')
 }
 
 const templates = {
@@ -15,13 +15,13 @@ const templates = {
   parcel: require('./templates/parcel'),
   parcelBabel: require('./templates/parcel-babel'),
   parcelBabelEslint: require('./templates/parcel-babel-eslint'),
-  parcelEslint: require('./templates/parcel-eslint'),
+  parcelEslint: require('./templates/parcel-eslint')
 }
 
 const path = require('path')
 const fs = require('fs')
 
-function extendRecursivly(proot, config, e) {
+function extendRecursivly (proot, config, e) {
   const c = {}
   const o = {}
 
@@ -55,5 +55,5 @@ function extendRecursivly(proot, config, e) {
 }
 
 module.exports = {
-  extendRecursivly,
+  extendRecursivly
 }

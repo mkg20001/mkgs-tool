@@ -7,10 +7,10 @@ module.exports = config => {
         {
           files: ['test/**/*.js'],
           env: {
-            mocha: true,
-          },
-        },
-      ],
-    },
+            mocha: true
+          }
+        }
+      ]
+    }
   }
 }

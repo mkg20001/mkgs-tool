@@ -11,5 +11,5 @@ module.exports = {
   join: (o, n) => {
     return mergeOptions(o, n)
   },
-  srcFile: 'package.json',
+  srcFile: 'package.json'
 }

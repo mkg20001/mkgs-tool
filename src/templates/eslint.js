@@ -3,22 +3,22 @@ module.exports = config => {
     eslintrc: {
       extends: [
         'oclif',
-        'ipfs/js',
+        'ipfs/js'
       ],
       rules: {
-        'no-await-in-loop': 'off',
-      },
+        'no-await-in-loop': 'off'
+      }
     },
     packageJSON: {
       scripts: {
         lint: 'eslint .',
-        fix: 'eslint --fix .',
+        fix: 'eslint --fix .'
       },
       devDependencies: {
         eslint: '*',
         'eslint-config-ipfs': '*',
-        'eslint-config-oclif': '*',
-      },
-    },
+        'eslint-config-oclif': '*'
+      }
+    }
   }
 }
