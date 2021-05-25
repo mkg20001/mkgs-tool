@@ -1,3 +1,4 @@
+'use strict'
 
 const mergeOptions = require('merge-options')
 

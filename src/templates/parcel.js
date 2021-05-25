@@ -1,3 +1,4 @@
+'use strict'
 
 module.exports = config => {
   let v2 = false
@@ -10,7 +11,7 @@ module.exports = config => {
     v2 = true
     entries = config.entries.join(' ')
   } else {
-    console.warn('Specific either template.parcel.entry or for parcel v2 template.parcel.entries (array) in package.json')
+    console.warn('Specific either template.parcel.entry or for parcel v2 template.parcel.entries (array) in package.json') // eslint-disable-line no-console
   }
   return {
     extends: ['node'],

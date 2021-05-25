@@ -1,3 +1,4 @@
+'use strict'
 
 module.exports = config => {
   return {
@@ -8,6 +9,12 @@ module.exports = config => {
           files: ['public/**/*.js'],
           env: {
             browser: true
+          },
+          parserOptions: {
+            sourceType: 'module'
+          },
+          rules: {
+            'node/no-unsupported-features/es-syntax': 'off'
           }
         }
       ]
