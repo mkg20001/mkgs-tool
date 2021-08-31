@@ -2,7 +2,7 @@
 
 module.exports = config => {
   return {
-    extends: ['node', 'esm-eslint'],
+    extends: ['node', 'esmEslint'],
     eslintrc: {
       overrides: [
         {
