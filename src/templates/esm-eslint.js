@@ -2,7 +2,7 @@
 
 module.exports = config => {
   return {
-    extends: ['node', 'eslint'],
+    extends: ['node', 'esm', 'eslint'],
     eslintrc: {
       parserOptions: {
         sourceType: 'module'
