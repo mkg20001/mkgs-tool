@@ -7,7 +7,7 @@ module.exports = config => {
       !config.noYarn && 'yarn-error.log',
       !config.noLock && !config.noNodeLock && 'package-lock.json',
       !config.noLock && !config.noYarnLock && !config.noYarn && 'yarn.lock',
-      !config.noTools && '.nyc-output'
+      !config.noTools && '.nyc_output'
     ],
     packageJSON: config.noTools
       ? {}
