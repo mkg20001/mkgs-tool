@@ -13,6 +13,7 @@ const templates = {
   nix: require('./templates/nix'),
   esm: require('./templates/esm'),
   esmEslint: require('./templates/esm-eslint'),
+  knexEslint: require('./templates/knex-eslint'),
   node: require('./templates/node'),
   nodeEslint: require('./templates/node-eslint'),
   nodeEslintESM: require('./templates/node-eslint-esm'),

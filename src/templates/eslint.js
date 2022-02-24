@@ -4,7 +4,7 @@ module.exports = config => {
   return {
     eslintrc: {
       extends: [
-        'oclif',
+        // 'oclif',
         'ipfs/js'
       ],
       rules: {
