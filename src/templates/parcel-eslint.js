@@ -4,8 +4,8 @@ module.exports = config => {
   return {
     extends: ['parcel', 'eslint'],
     eslintrc: {
-      overrides: [
-        {
+      _overrides: {
+        parcel: {
           files: ['public/**/*.js'],
           env: {
             browser: true
@@ -17,7 +17,7 @@ module.exports = config => {
             'node/no-unsupported-features/es-syntax': 'off'
           }
         }
-      ]
+      }
     }
   }
 }

@@ -1,6 +1,5 @@
 {
   "extends": [
-    "oclif",
     "ipfs/js"
   ],
   "rules": {

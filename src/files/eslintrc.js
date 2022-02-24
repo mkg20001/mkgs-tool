@@ -8,7 +8,14 @@ module.exports = {
     return mergeOptions(cur, res)
   },
   parse: JSON.parse,
-  stringify: o => JSON.stringify(o, null, 2) + '\n',
+  stringify: o => {
+    if (o._overrides) {
+      o.overrides = Object.values(o._overrides)
+      delete o._overrides
+    }
+
+    return JSON.stringify(o, null, 2) + '\n'
+  },
   join: (o, n) => {
     return mergeOptions(o, n)
   },

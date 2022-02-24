@@ -4,14 +4,14 @@ module.exports = config => {
   return {
     extends: ['node', 'eslint'],
     eslintrc: {
-      overrides: [
-        {
+      _overrides: {
+        node: {
           files: ['test/**/*.js'],
           env: {
             mocha: true
           }
         }
-      ]
+      }
     }
   }
 }
