@@ -3,7 +3,10 @@
 module.exports = config => {
   return {
     babelrc: {
-      plugins: ['@babel/plugin-transform-runtime']
+      plugins: [
+        '@babel/plugin-syntax-import-assertions',
+        '@babel/plugin-transform-runtime'
+      ]
     }
   }
 }
