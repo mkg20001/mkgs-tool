@@ -7,6 +7,12 @@ module.exports = config => {
         '@babel/plugin-syntax-import-assertions',
         '@babel/plugin-transform-runtime'
       ]
+    },
+    packageJSON: config.noDeps ? {} : {
+      devDependencies: {
+        '@babel/plugin-syntax-import-assertions': '*',
+        '@babel/plugin-transform-runtime': '*'
+      }
     }
   }
 }
